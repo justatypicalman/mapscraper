@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Maps Scraper</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>
+      Google Maps Scraper<img
+        width="50"
+        src="{{ url_for('static', filename='images/google-maps-svgrepo-com.png') }}"
+      />
+    </h1>
+
+    <form action="/" method="POST">
+      <input type="text" name="place" placeholder="Enter Place" required />
+      <input
+        type="text"
+        name="building_type"
+        placeholder="Enter Building Type"
+        required
+      />
+      <button type="submit">Scrape</button>
+    </form>
+  </body>
+</html>
